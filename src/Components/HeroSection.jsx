@@ -18,7 +18,7 @@ function HeroSection() {
               <Text fontSize={"20px"} fontWeight={500}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod justo vitae urna efficitur</Text>
             </Box>
             <Box>
-              <Buttons/>
+              <Buttons bg={"#f64b3c"} color={"white"} />
             </Box>
           </Box>
         </Box>

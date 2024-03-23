@@ -1,5 +1,4 @@
 import {
-    Badge,
     Box,
     Collapse,
     Flex,
@@ -14,7 +13,7 @@ import {
     useColorModeValue,
     useDisclosure,
   } from "@chakra-ui/react";
-  import React from "react";
+  import React, { useEffect, useState } from "react";
   import {
     HamburgerIcon,
     CloseIcon,
@@ -22,19 +21,40 @@ import {
     ChevronRightIcon,
   } from "@chakra-ui/icons";
 
-  import { MdKeyboardArrowDown } from "react-icons/md";
-
   import logo from "../assets/logo.svg"
+  import logo2 from "../assets/logo2.svg"
   
   
   function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
+    const [isSticky,setIsSticky] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if(window.scrollY > 0){
+          setIsSticky(true)
+        }else{
+          setIsSticky(false)
+        }
+      }
+
+      window.addEventListener('scroll',handleScroll)
+
+      return () => {
+        window.removeEventListener('scroll',handleScroll)
+      }
+    },[])
+
+
+    const background = isSticky ? "#f6eedf" : "!important";
+    const color = isSticky ? "#f64b3c" : "white";
+    const commonLogo = isSticky ? logo2 : logo
   
     return (
       <Box>
         <Flex
-          bg={" !important"}
-          color={"white"}
+          bg={background}
+          color={color}
           minH={"25px"}
           px={{ base: 10, md: 20, lg: "70px" }}
           py={{ base: "10px", md: "24px", lg: "35px" }}
@@ -60,7 +80,7 @@ import {
                 alignItems={"center"}
                 pl={"20px"}
               >
-                <Image src={logo} w={"40px"} h={"100%"} objectFit={"contain"} />
+                <Image src={commonLogo} w={"40px"} h={"100%"} objectFit={"contain"} />
               </Box>
             
   
@@ -72,7 +92,7 @@ import {
               display={{ base: "none", md: "none", lg: "none", xl: "flex" }}
             >
               <Box display={"flex"} alignItems={"center"}>
-                <DesktopNav color={"white"} background={"white"} />
+                <DesktopNav color={color} background={background} />
               </Box>
             </Flex>
   

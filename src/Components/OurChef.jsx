@@ -7,7 +7,7 @@ import banner2 from "../assets/banner2.png"
 function OurChef() {
   return (
     <div>
-        <Box bg={"#f6eedf"} color={"#f64b3c"} backgroundImage={banner2} backgroundSize={"cover"} h={{base:"auto",lg:"100vh"}} backgroundAttachment={"fixed"}>
+        <Box bg={"#f6eedf"} color={"#f64b3c"} backgroundImage={banner2} backgroundSize={"cover"} h={{base:"auto",lg:"110vh"}} backgroundAttachment={"fixed"}>
             <Box p={"80px 50px 60px 50px"} w={{base:"90%",lg:"1250px"}} m={"auto"} display={"flex"} flexDirection={"column"} gap={"10px"}>
                 <Box>
                     <Text textAlign={"center"} fontSize={{base:"30px",lg:"60px"}} fontWeight={700}>Our Chef</Text>
