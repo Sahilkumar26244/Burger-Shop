@@ -128,7 +128,7 @@ import {
                     fontSize={"15px"}
                     fontWeight={600}
                     letterSpacing={"1px"}
-                    
+                    cursor={"pointer"}
                     color={color}
                     opacity={1}
                     _hover={{
@@ -176,8 +176,8 @@ import {
         display={"block"}
         p={2}
         rounded={"md"}
-        _hover={{ bg: useColorModeValue("#8bc53f", "gray.900") }}
-      >
+        _hover={{ bg: useColorModeValue("#8bc53f", "gray.900") }}      
+        >
         <Stack
           direction={"row"}
           align={"center"}
