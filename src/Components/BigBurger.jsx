@@ -1,18 +1,16 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react'
 import React from 'react'
+import banner3 from "../assets/banner3.png"
+import burger2 from "../assets/burger2.jpg"
 import Buttons from '../Common/Buttons'
-import burger1 from "../assets/burger1.jpg"
 
-function BestBurger() {
+function BigBurger() {
   return (
     <div>
-        <Box bg={"#f64b3c"}>
-            <Flex gap={"100px"} w={{base:"90%",lg:"1250px"}} m={"auto"} p={"150px 50px"} direction={{base:"column",lg:'row'}} border={"1px solid black"}>
-                <Box w={{base:"100%",lg:"50%"}}>
-                    <Image w={"500px"} borderRadius={"50%"} src={burger1} objectFit={"contain"} />
-                </Box>
-                <Box w={{base:"100%",lg:"60%"}} display={"flex"} alignItems={"center"} color={"white"}>
-                    <Box display={"flex"} flexDirection={"column"}>
+        <Box backgroundImage={banner3} backgroundSize={"cover"} h={{base:"auto",lg:"110vh"}} backgroundAttachment={"fixed"}>
+            <Flex gap={"100px"}  w={{base:"90%",lg:"1250px"}} m={"auto"} p={"150px 50px"} direction={{base:"column",lg:'row'}} border={"1px solid black"}>
+                <Box w={{base:"100%",lg:"60%"}} display={"flex"} alignItems={"center"}>
+                    <Box display={"flex"} flexDirection={"column"} color={"#f64b3c"}>
                         <Box>
                             <Text fontSize={{base:"30px",lg:"60px"}} fontWeight={700} textAlign={{base:"center",lg:"left"}}>Best Burger</Text>
                         </Box>
@@ -20,9 +18,12 @@ function BestBurger() {
                             <Text fontSize={{base:"10px",lg:"20px"}} fontWeight={400} textAlign={{base:"center",lg:"left"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod justo vitae urna efficitur</Text>
                         </Box>
                         <Box mt={"40px"} display={"flex"} justifyContent={{base:"center",lg:"flex-start"}}>
-                            <Buttons bg={"white"} color={"#f64b3c"} />
+                            <Buttons bg={"#f64b3c"} color={"white"} />
                         </Box>
                     </Box>
+                </Box>
+                <Box w={{base:"100%",lg:"50%"}}>
+                    <Image w={"500px"} h={{base:"230px",lg:"500px"}} borderRadius={"100px"} src={burger2} objectFit={"cover"} />
                 </Box>
             </Flex>
         </Box>
@@ -30,4 +31,4 @@ function BestBurger() {
   )
 }
 
-export default BestBurger
+export default BigBurger
