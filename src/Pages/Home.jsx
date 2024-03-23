@@ -5,6 +5,7 @@ import HeroSection from '../Components/HeroSection'
 import OurChef from '../Components/OurChef'
 import BestBurger from '../Components/BestBurger'
 import BigBurger from '../Components/BigBurger'
+import Statistics from '../Components/Statistics'
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
           <OurChef/>
           <BestBurger/>
           <BigBurger/>
+          <Statistics/>
           <Footer/>
     </div>
   )
