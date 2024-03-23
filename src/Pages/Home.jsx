@@ -6,6 +6,7 @@ import OurChef from '../Components/OurChef'
 import BestBurger from '../Components/BestBurger'
 import BigBurger from '../Components/BigBurger'
 import Statistics from '../Components/Statistics'
+import Packages from '../Components/Packages'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
           <BestBurger/>
           <BigBurger/>
           <Statistics/>
+          <Packages/>
           <Footer/>
     </div>
   )
