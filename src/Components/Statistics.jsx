@@ -5,7 +5,7 @@ function Statistics() {
   return (
     <div>
         <Box bg={"#f64b3c"} color={"white"} h={{base:"auto",lg:"110vh"}} display={"flex"} alignItems={"center"}>
-            <Box p={"80px 50px 60px 50px"} w={{base:"90%",lg:"1250px"}} m={"auto"} border={"1px solid black"}>
+            <Box p={"80px 50px 60px 50px"} w={{base:"90%",lg:"1250px"}} m={"auto"}>
                 <Box>
                     <Text textAlign={"center"} fontSize={{base:"30px",lg:"60px"}} fontWeight={700}>Statistics</Text>
                 </Box>

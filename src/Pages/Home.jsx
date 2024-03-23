@@ -7,6 +7,8 @@ import BestBurger from '../Components/BestBurger'
 import BigBurger from '../Components/BigBurger'
 import Statistics from '../Components/Statistics'
 import Packages from '../Components/Packages'
+import Poster from '../Components/Poster'
+import SubscribeSection from '../Components/SubscribeSection'
 
 function Home() {
   return (
@@ -18,7 +20,9 @@ function Home() {
           <BigBurger/>
           <Statistics/>
           <Packages/>
-          <Footer/>
+          <Poster/>
+          <SubscribeSection/>
+        <Footer/>
     </div>
   )
 }

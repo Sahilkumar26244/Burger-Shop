@@ -10,7 +10,7 @@ function HeroSection() {
           <Box w={"100%"} h={"100vh"} bg={"black"} >
             <Image display={{base:"none",lg:"flex"}} w={"100%"} h={"100%"} objectFit={"cover"} src={banner} />
           </Box>
-          <Box position={"absolute"} top={{base:"25%",lg:"30%"}} left={"6%"} color={"white"} w={{base:"90%",lg:"40%"}} display={"flex"} flexDirection={"column"} gap={"20px"}>
+          <Box position={"absolute"} top={{base:"25%",lg:"35%"}} left={"6%"} color={"white"} w={{base:"90%",lg:"40%"}} display={"flex"} flexDirection={"column"} gap={"20px"}>
             <Box>
               <Text fontSize={"60px"} fontWeight={700} lineHeight={"60px"}>Get Cashback upto 50%</Text>
             </Box>

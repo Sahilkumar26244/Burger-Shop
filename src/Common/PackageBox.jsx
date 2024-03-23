@@ -6,9 +6,9 @@ import Buttons from './Buttons'
 function PackageBox({p,price,desc}) {
   return (
     
-        <Box p={"20px"} bg={"white"} borderRadius={"10px"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"} gap={"20px"} w={"250px"}>
+        <Box p={"20px"} bg={"white"} borderRadius={"10px"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"} gap={"20px"} w={{base:"auto",lg:"250px"}}>
             <Box>
-                <Text fontSize={{base:"10px",lg:"20px"}} fontWeight={600} textTransform={"uppercase"}>{p}</Text>
+                <Text fontSize={{base:"15px",lg:"20px"}} fontWeight={700} textTransform={"uppercase"}>{p}</Text>
             </Box>
             <Box>
                 <Image src={logo3} w={"80px"}  />

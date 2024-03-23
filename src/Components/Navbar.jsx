@@ -1,6 +1,7 @@
 import {
     Box,
     Collapse,
+    Divider,
     Flex,
     Icon,
     IconButton,
@@ -47,6 +48,7 @@ import {
 
 
     const background = isSticky ? "#f6eedf" : "!important";
+    const backgroundMob = isSticky ? "#f6eedf" : "black";
     const color = isSticky ? "#f64b3c" : "white";
     const commonLogo = isSticky ? logo2 : logo
   
@@ -56,8 +58,8 @@ import {
           bg={background}
           color={color}
           minH={"25px"}
-          px={{ base: 10, md: 20, lg: "70px" }}
-          py={{ base: "10px", md: "24px", lg: "35px" }}
+          px={{ base: 5, lg: "70px" }}
+          py={{ base: "10px", lg: "35px" }}
           borderBottom={1}
           align={"center"}
           position="fixed" // Add sticky positioning
@@ -107,7 +109,7 @@ import {
             display={{ base: "flex", md: "flex", lg: "flex", xl: "none" }}
           >
             <IconButton
-              color={"white"}
+              color={color}
               onClick={onToggle}
               icon={
                 isOpen ? (
@@ -126,7 +128,7 @@ import {
         </Flex>
   
         <Collapse in={isOpen} animateOpacity>
-          <MobileNav y={"10px"} opacity={""} />
+          <MobileNav y={"10px"} opacity={""} backgroundMob={backgroundMob} color={color} />
         </Collapse>
       </Box>
     );
@@ -230,11 +232,11 @@ import {
     );
   };
   
-  const MobileNav = ({ y, opacity }) => {
+  const MobileNav = ({ y, opacity,backgroundMob,color }) => {
     return (
       <Stack
-        bg={useColorModeValue("black", "white")}
-        p={"20px 50px"}
+        bg={backgroundMob}
+        p={"20px 40px"}
         display={{ md: "flex", xl: "none" }}
         mt={{ base: "60px", md: "70px", lg: "110px" }}
         position="fixed" // Add sticky positioning
@@ -245,13 +247,13 @@ import {
         opacity={opacity}
       >
         {NAV_ITEMS.map((navItem, index) => (
-          <MobileNavItem key={index} {...navItem} />
+          <MobileNavItem key={index} {...navItem} color={color} />
         ))}
       </Stack>
     );
   };
   
-  const MobileNavItem = ({ label, children, href }) => {
+  const MobileNavItem = ({ label, children, color }) => {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
@@ -271,49 +273,15 @@ import {
               <Text
                 fontSize={{ lg: "30px" }}
                 fontWeight={600}
-                color={"white"}
+                color={color}
               >
                 {label}
               </Text>
-           
-  
-            {children && (
-              <Icon
-                as={ChevronDownIcon}
-                transition={"all .25s ease-in-out"}
-                transform={isOpen ? "rotate(180deg)" : ""}
-                w={6}
-                h={6}
-              />
-            )}
-          </Flex>
+              </Flex>
+              <Divider/>
         </Box>
   
-        <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-          <Stack
-            mt={0}
-            ml={{ lg: 10 }}
-            mr={{ lg: 10 }}
-            borderTop={"1px solid lightgrey"}
-            align={"start"}
-          >
-            {children &&
-              children.map((child, index) => (
-                <Box
-                  fontSize={{ lg: "25px" }}
-                  fontWeight={600}
-                  pl={5}
-                  w={"100%"}
-                  as="a"
-                  key={index}
-                  py={2}
-                  borderBottom={"1px solid lightgrey"}
-                >
-                  {child.label}
-                </Box>
-              ))}
-          </Stack>
-        </Collapse>
+        
       </Stack>
     );
   };

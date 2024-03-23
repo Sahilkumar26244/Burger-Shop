@@ -12,7 +12,7 @@ function Packages() {
                     <Text textAlign={"center"} fontSize={{base:"30px",lg:"60px"}} fontWeight={700}>Popular Package</Text>
                 </Box>
                 <Box mt={"40px"} >
-                    <Flex justifyContent={"space-around"} direction={{base:"column",lg:"row"}} gap={"20px"} border={"1px solid"}>
+                    <Flex justifyContent={"space-around"} direction={{base:"column",lg:"row"}} gap={"20px"}>
                         <PackageBox p={"package i"} price={"10.00"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."} />
                         <PackageBox p={"package ii"} price={"20.00"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}/>
                         <PackageBox p={"package iii"} price={"30.00"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}/>

@@ -7,7 +7,7 @@ function BestBurger() {
   return (
     <div>
         <Box bg={"#f64b3c"}>
-            <Flex gap={"100px"} w={{base:"90%",lg:"1250px"}} m={"auto"} p={"150px 50px"} direction={{base:"column",lg:'row'}} border={"1px solid black"}>
+            <Flex gap={"100px"} w={{base:"90%",lg:"1250px"}} m={"auto"} p={"150px 50px"} direction={{base:"column",lg:'row'}}>
                 <Box w={{base:"100%",lg:"50%"}}>
                     <Image w={"500px"} borderRadius={"50%"} src={burger1} objectFit={"contain"} />
                 </Box>
